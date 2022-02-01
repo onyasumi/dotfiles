@@ -1,50 +1,33 @@
 * {
     border: none;
     border-radius: 0;
-    font-weight: 500;
-    font-family: 'SF Pro Text';
+    font-weight: 400;
+    font-family: 'SF Mono';
     font-size: 14px;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
+    background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.35));
+    color: honeydew;
+}
+
+#tags button {
+    padding: 0 0.75em;
+    background: transparent; color: lightsteelblue;
+}
+
+#tags button.focused {
     color: white;
 }
 
-#window {
-    font-weight: 600;
-    font-family: 'SF Pro Text';
-    font-size: 16px;
-}
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
-
-#workspaces button {
-    padding: 0 5px;
-    background: transparent; color: white; border-top: 2px solid transparent;
-}
-
-#workspaces button.focused {
-    color: #CCCCCC;
-    border-top: 2px solid #E4002B;
-}
-
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
-}
-
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
-    padding: 0 3px;
+    padding: 0 7px;
     margin: 0 2px;
 }
 
 #clock {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 #battery {
