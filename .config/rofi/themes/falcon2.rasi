@@ -1,0 +1,60 @@
+// Falcon Theme v2
+// Color scheme inspired by the Falcon 9
+
+* {
+    falcon-white: #F9F9F940;
+    droneship-grey: #222222CC;
+    spacex-blue: #005288;
+    reflight-grey: #A7A9AC;
+    nasa-red: #E4002B;
+
+    background-color: transparent;
+    spacing: 0;
+    width: 512px;
+}
+
+inputbar {
+    border: 0 0 2px 0;
+    children: [entry];
+}
+
+entry {
+    padding: 16px;
+    background-color: @droneship-grey;
+    text-color: @reflight-grey;
+}
+
+listview {
+    lines: 10;
+    cycle: false;
+    scrollbar: false;
+}
+
+element {
+    border: 0 0 2px 0;
+    padding: 8px;
+    background-color: #F9F9F9CC;
+}
+
+element-icon {
+    margin: 0 8px 0 0;
+    size: 18px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element.normal {
+    text-color: @spacex-blue;
+}
+
+element.selected {
+    background-color: @droneship-grey;
+    text-color: @nasa-red;
+}
+
+element.alternate {
+    text-color: @spacex-blue;
+}

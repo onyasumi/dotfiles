@@ -1,0 +1,9 @@
+configuration {
+	modi: "ssh,drun,combi";
+	font: "SF Mono 12";
+	terminal: "kitty";
+	ssh-client: "ssh";
+	ssh-command: "kitty -e {ssh-client} {host}";
+	dpi: 157;
+}
+@theme "falcon2"
