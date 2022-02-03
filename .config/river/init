@@ -26,6 +26,9 @@ riverctl map -repeat normal $mod Return spawn kitty
 # Mod+Q to close the focused view
 riverctl map -repeat normal $mod Q close
 
+# Mod+Backslash to run Swaylock
+riverctl map normal $mod Backslash spawn "source ~/.config/river/lock.sh"
+
 # Mod+Shift+E to exit river
 riverctl map normal $mod+Shift E exit
 
