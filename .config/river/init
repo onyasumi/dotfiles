@@ -17,8 +17,8 @@ riverctl map -repeat normal $mod D spawn "rofi -combi-modi drun,ssh -show combi 
 # Mod+S to take a screenshot
 riverctl map normal $mod S spawn grim
 
-# Mod+W to start an instance of Firefox
-riverctl map normal $mod W spawn firefox
+# Mod+W to launch browser
+riverctl map normal $mod W spawn chromium
 
 # Mod+Enter to start an instance of Terminal
 riverctl map -repeat normal $mod Return spawn kitty
@@ -27,7 +27,7 @@ riverctl map -repeat normal $mod Return spawn kitty
 riverctl map -repeat normal $mod Q close
 
 # Mod+Backslash to run Swaylock
-riverctl map normal $mod Backslash spawn "source ~/.config/river/lock.sh"
+riverctl map normal $mod Backslash spawn "source ~/.config/scripts/lock"
 
 # Mod+Shift+E to exit river
 riverctl map normal $mod+Shift E exit
