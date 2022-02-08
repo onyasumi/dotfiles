@@ -1,0 +1,64 @@
+@define-color red	#F7768E;
+@define-color orange	#FF9E64;
+@define-color yellow	#E0AF68;
+@define-color green	#9ECE6A;
+@define-color blue	#7AA2F7;
+@define-color purple	#AD8EE6;
+@define-color lightgrey	#444B6A;
+@define-color grey	#3B3D57;
+
+* {
+	background-image: none;
+}
+window {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+button {
+	background-color: @grey;
+	border-width: 0px;
+	border-radius: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	box-shadow: none;
+	font-family: SF Pro Display;
+	color: #5e81ac;
+	font-size: 20pt;
+	text-shadow: none;
+}
+
+button:focus, button:active, button:hover {
+	background-color: @lightgrey;
+	color: #4c566a;
+	outline-style: none;
+}
+
+#lock {
+	color: @red;
+	background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+	color: @blue;
+	background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+	color: @yellow;
+	background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+	color: @orange;
+	background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+	color: @green;
+	background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+	color: @purple;
+	background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}

@@ -26,6 +26,10 @@ riverctl map -repeat normal $mod Return spawn kitty
 # Mod+Q to close the focused view
 riverctl map -repeat normal $mod Q close
 
+# Mod+Delete or Backspace to run wlogout
+riverctl map normal $mod Backspace spawn "wlogout -p layer-shell"
+riverctl map normal $mod Delete spawn "wlogout -p layer-shell"
+
 # Mod+Backslash to run Swaylock
 riverctl map normal $mod Backslash spawn "source ~/.config/scripts/lock"
 
@@ -153,9 +157,9 @@ do
 done
 
 # Set background and border color
-riverctl background-color 0x002b36
-riverctl border-color-focused 0x93a1a1
-riverctl border-color-unfocused 0x586e75
+riverctl background-color 0x00000000
+riverctl border-color-focused 0xf0fff0
+riverctl border-color-unfocused 0x00000000
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
@@ -182,7 +186,17 @@ riverctl spawn "mpDris2"
 riverctl spawn "sleep 1 && ransong"
 # Allows GUI programs to be run as root
 riverctl spawn "/usr/lib/xfce-polkit/xfce-polkit"
+# Sets touchpad settings
+riverctl spawn "/bin/sh ~/.config/scripts/touchpad"
 
+# Sets Touchpad settings
+TOUCHPAD=$(riverctl list-inputs | grep Synaptics)
+if [ ! -z "$TOUCHPAD" ]; then
+	riverctl input $TOUCHPAD accel-profile adaptive
+	riverctl input $TOUCHPAD pointer-accel 0.8
+	riverctl input $TOUCHPAD natural-scroll enabled
+	riverctl input $TOUCHPAD tap enabled
+fi
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
