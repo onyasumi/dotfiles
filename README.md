@@ -11,3 +11,5 @@ WM: River
 Bar: Waybar  
 Terminal: Kitty  
 Launcher: Rofi  
+Lock: Swaylock
+Power Menu: Wlogout
