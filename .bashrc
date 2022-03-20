@@ -22,12 +22,20 @@ shopt -s nocaseglob
 
 # Random Aliases
 alias neko="cat"
-alias :q='exit'
+alias :q="exit"
 
 # Random Exports
 export EDITOR=vi
 export TERMINAL=kitty
 export MOZ_ENABLE_WAYLAND=1
+
+# GNU Specific Exports
+ls --version 2>&1 | grep -q GNU
+if [ $? == 0 ]; then
+	alias ls="ls --color=auto"
+else
+	export CLICOLOR=true
+fi
 
 # Set Prompt
 source ~/.config/kanji.sh
