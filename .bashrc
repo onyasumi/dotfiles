@@ -22,6 +22,7 @@ shopt -s nocaseglob
 
 # Random Aliases
 alias neko="cat"
+alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias :q="exit"
 
 # Random Exports
