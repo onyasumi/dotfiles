@@ -23,5 +23,5 @@ nihon['nagasaki']='長崎'
 nihon['sasebo']='佐世保'
 nihon['kagoshima']='鹿児島'
 
-hostname=$(hostname -s)
+hostname=$(cat /etc/hostname)
 NIHON=${nihon[$hostname]}
