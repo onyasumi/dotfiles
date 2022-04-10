@@ -169,6 +169,8 @@ riverctl float-filter-add app-id float
 riverctl float-filter-add title "popup title with spaces"
 
 ## Autostart
+# Sets display scaling
+riverctl spawn "~/.config/scripts/scaling"
 # Sets keybinds 
 riverctl spawn "doas keyd"
 # Starts sound stuff
@@ -188,8 +190,6 @@ riverctl spawn "sleep 1 && ransong"
 riverctl spawn "/usr/lib/xfce-polkit/xfce-polkit"
 # Sets touchpad settings
 riverctl spawn "~/.config/scripts/touchpad"
-# Sets display scaling
-riverctl spawn "~/.config/scripts/scaling"
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.
