@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wlr-randr | grep 4K | awk '{print $1}' |
+while IFS= read DISPLAY; do
+	$(wlr-randr --output $DISPLAY --scale 1.5)
+done

@@ -31,7 +31,7 @@ riverctl map normal $mod Backspace spawn "wlogout -p layer-shell"
 riverctl map normal $mod Delete spawn "wlogout -p layer-shell"
 
 # Mod+Backslash to run Swaylock
-riverctl map normal $mod Backslash spawn "source ~/.config/scripts/lock"
+riverctl map normal $mod Backslash spawn "~/.config/scripts/lock"
 
 # Mod+Shift+E to exit river
 riverctl map normal $mod+Shift E exit
@@ -187,16 +187,9 @@ riverctl spawn "sleep 1 && ransong"
 # Allows GUI programs to be run as root
 riverctl spawn "/usr/lib/xfce-polkit/xfce-polkit"
 # Sets touchpad settings
-riverctl spawn "/bin/sh ~/.config/scripts/touchpad"
-
-# Sets Touchpad settings
-TOUCHPAD=$(riverctl list-inputs | grep Synaptics)
-if [ ! -z "$TOUCHPAD" ]; then
-	riverctl input $TOUCHPAD accel-profile adaptive
-	riverctl input $TOUCHPAD pointer-accel 0.8
-	riverctl input $TOUCHPAD natural-scroll enabled
-	riverctl input $TOUCHPAD tap enabled
-fi
+riverctl spawn "~/.config/scripts/touchpad"
+# Sets display scaling
+riverctl spawn "~/.config/scripts/scaling"
 
 # Set and exec into the default layout generator, rivertile.
 # River will send the process group of the init executable SIGTERM on exit.

@@ -1,3 +1,5 @@
+#!/bin/sh
+
 swaylock --screenshots --clock --indicator-idle-visible --indicator-radius 100  --indicator-thickness 7 \
 --ring-color 455a64 --key-hl-color 32cd32 --text-color e6e6fa --line-color 00000000 --inside-color 00000088 --separator-color 00000000 \
 --ring-clear-color 455a64 --bs-hl-color dc143c --text-clear-color e6e6fa --line-clear-color 00000000 --inside-clear-color 00000088 \

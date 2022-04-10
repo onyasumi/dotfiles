@@ -1,3 +1,5 @@
+#!/bin/bash
+
 TOUCHPAD=$(riverctl list-inputs | grep Synaptics)
 if [ ! -z "$TOUCHPAD" ]; then
 	riverctl input $TOUCHPAD accel-profile adaptive
