@@ -11,6 +11,9 @@
 # Use the "logo" key as the primary modifier
 mod="Mod4"
 
+# XDG_DISPLAY_PORTAL stuff
+riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway"
+
 # Mod+D to launch rofi
 riverctl map -repeat normal $mod D spawn "rofi -combi-modi drun,ssh -show combi -show-icons"
 
