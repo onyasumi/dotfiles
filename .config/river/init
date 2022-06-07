@@ -18,10 +18,10 @@ riverctl spawn "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG
 riverctl map -repeat normal $mod D spawn "rofi -combi-modi drun,ssh -show combi -show-icons"
 
 # Mod+S to take a screenshot
-riverctl map normal $mod S spawn grim
+riverctl map normal $mod S spawn grimshot save area ~/$(date +%s)-grim.png
 
 # Mod+W to launch browser
-riverctl map normal $mod W spawn chromium
+riverctl map normal $mod W spawn firefox
 
 # Mod+Enter to start an instance of Terminal
 riverctl map -repeat normal $mod Return spawn kitty
