@@ -55,6 +55,10 @@ then vega
 else neofetch
 fi
 
+# Run RiverWM
+if ! [[ $TERM == "xterm" ]]; then
+	river
+fi
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
