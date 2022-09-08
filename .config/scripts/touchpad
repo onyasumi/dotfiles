@@ -8,3 +8,8 @@ if [ ! -z "$TOUCHPAD" ]; then
 	riverctl input $TOUCHPAD tap enabled
 fi
 
+TRACKPOINT=$(riverctl list-inputs | grep IBM_TrackPoint)
+if [ ! -z "$TOUCHPAD" ]; then
+	riverctl input $TOUCHPAD accel-profile adaptive
+	riverctl input $TOUCHPAD pointer-accel 0.8
+fi
