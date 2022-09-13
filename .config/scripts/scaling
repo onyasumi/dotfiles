@@ -4,3 +4,7 @@ wlr-randr | grep 4K | awk '{print $1}' |
 while IFS= read DISPLAY; do
 	$(wlr-randr --output $DISPLAY --scale 1.5)
 done
+
+if [[ $(cat /etc/hostname) == kyoto ]] || [[ $(cat /etc/hostname) == nagoya ]]; then
+	$(wlr-randr --output eDP-1 --scale 1.25)
+fi
