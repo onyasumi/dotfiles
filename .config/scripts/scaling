@@ -6,6 +6,7 @@ while IFS= read DISPLAY; do
 	$(wlr-randr --output $DISPLAY --scale 1.5)
 done
 
+wlr-randr --output DP-2 --pos 0,0
 wlr-randr --output DP-3 --pos 2560,0
 
 # 1080p display scaling on laptops
