@@ -48,16 +48,16 @@ else
 	export PS2="\[\e[01;96m\] > \[\e[m\]"
 fi
 
-# Run fetch
-clear
-if command -v vega >> /dev/null
-then vega
-else neofetch
-fi
-
 # Run RiverWM
 if ! [[ $TERM == "xterm" ]]; then
 	river
+else
+	# Run fetch
+	clear
+	if command -v vega >> /dev/null
+	then vega
+	else neofetch
+	fi
 fi
 
 # BEGIN_KITTY_SHELL_INTEGRATION
