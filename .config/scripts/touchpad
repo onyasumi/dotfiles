@@ -11,5 +11,5 @@ fi
 TRACKPOINT=$(riverctl list-inputs | grep IBM_TrackPoint)
 if [ ! -z "$TOUCHPAD" ]; then
 	riverctl input $TRACKPOINT accel-profile adaptive
-	riverctl input $TRACKPOINT pointer-accel 0.8
+	riverctl input $TRACKPOINT pointer-accel 1.0
 fi

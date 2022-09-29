@@ -144,9 +144,9 @@ riverctl map passthrough $mod F11 enter-mode normal
 for mode in normal locked
 do
     # Control pulse audio volume with pamixer (https://github.com/cdemoulins/pamixer)
-    riverctl map -repeat $mode None XF86AudioRaiseVolume  spawn 'pamixer -i 5'
-    riverctl map -repeat $mode None XF86AudioLowerVolume  spawn 'pamixer -d 5'
-    riverctl map -repeat $mode None XF86AudioMute         spawn 'pamixer --toggle-mute'
+    riverctl map -repeat $mode None XF86AudioRaiseVolume  spawn 'pactl -- set-sink-volume 0 +5%'
+    riverctl map -repeat $mode None XF86AudioLowerVolume  spawn 'pactl -- set-sink-volume 0 -5%'
+    riverctl map -repeat $mode None XF86AudioMute         spawn 'pactl -- set-sink-mute 0 toggle'
 
     # Control MPRIS aware media players with playerctl (https://github.com/altdesktop/playerctl)
     riverctl map -repeat $mode None XF86AudioMedia spawn 'playerctl play-pause'
@@ -155,8 +155,8 @@ do
     riverctl map -repeat $mode None XF86AudioNext  spawn 'playerctl next'
 
     # Control screen backlight brighness with light (https://github.com/haikarainen/light)
-    riverctl map -repeat $mode None XF86MonBrightnessUp   spawn 'brightnessctl s +5%'
-    riverctl map -repeat $mode None XF86MonBrightnessDown spawn 'brightnessctl s 5%-'
+    riverctl map -repeat $mode None XF86MonBrightnessUp   spawn 'light -A 5'
+    riverctl map -repeat $mode None XF86MonBrightnessDown spawn 'light -U 5'
 done
 
 # Set background and border color
