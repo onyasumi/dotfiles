@@ -1,5 +1,6 @@
 #!/bin/bash
 
+read -sp "Enter your email for eduroam: " email
 read -sp "Enter your password for eduroam: " passwd
 
 nmcli con add \
@@ -8,7 +9,7 @@ nmcli con add \
   ifname "wlp3s0" \
   ssid "eduroam" \
   wifi-sec.key-mgmt "wpa-eap" \
-  802-1x.identity "f5tao@uwaterloo.ca" \
+  802-1x.identity $email \
   802-1x.password $passwd \
   802-1x.system-ca-certs "yes" \
   802-1x.domain-suffix-match "uwaterloo.ca" \
