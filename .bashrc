@@ -29,6 +29,7 @@ alias :q="exit"
 export EDITOR=vi
 export TERMINAL=kitty
 export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # GNU Specific Exports
 ls --version 2>&1 | grep -q GNU
