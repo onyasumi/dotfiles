@@ -25,6 +25,9 @@ alias neko="cat"
 alias dot="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 alias :q="exit"
 
+# Discord browserification trial
+alias discord="chromium --app=https://discord.com/app & disown"
+
 # Random Exports
 export EDITOR=vi
 export TERMINAL=kitty
