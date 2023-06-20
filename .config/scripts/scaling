@@ -10,6 +10,6 @@ wlr-randr --output DP-2 --pos 0,0
 wlr-randr --output DP-3 --pos 2560,0
 
 # 1080p display scaling on laptops
-if [[ $(cat /etc/hostname) == kyoto ]] || [[ $(cat /etc/hostname) == nagoya ]]; then
+if [[ $(cat /etc/hostname) == niigata ]] || [[ $(cat /etc/hostname) == aomori ]]; then
 	$(wlr-randr --output eDP-1 --scale 1.25)
 fi
