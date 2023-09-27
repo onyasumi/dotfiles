@@ -33,6 +33,7 @@ export EDITOR=vi
 export TERMINAL=kitty
 export MOZ_ENABLE_WAYLAND=1
 export QT_QPA_PLATFORMTHEME=qt5ct
+PATH=/home/kaneki/.surrealdb:$PATH
 
 # GNU Specific Exports
 ls --version 2>&1 | grep -q GNU
@@ -54,7 +55,7 @@ fi
 
 # Run RiverWM
 if ! [[ $TERM == "xterm" ]]; then
-	river
+	Hyprland
 else
 	# Run fetch
 	clear
@@ -67,3 +68,4 @@ fi
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
+. "$HOME/.cargo/env"

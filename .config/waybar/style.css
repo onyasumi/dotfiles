@@ -12,12 +12,13 @@ window#waybar {
     color: honeydew;
 }
 
-#tags button {
+#workspaces button {
     padding: 0 0.75em;
-    background: transparent; color: lightsteelblue;
+    background: transparent;
+    color: lightsteelblue;
 }
 
-#tags button.focused {
+#workspaces button.active {
     color: white;
 }
 
