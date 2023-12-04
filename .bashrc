@@ -53,8 +53,9 @@ else
 	export PS2="\[\e[01;96m\] > \[\e[m\]"
 fi
 
-# Run RiverWM
-if ! [[ $TERM == "xterm" ]]; then
+# Run Hyprland
+shopt -q login_shell
+if [ $?  == 0 ]; then
 	Hyprland
 else
 	# Run fetch
