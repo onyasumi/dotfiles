@@ -18,6 +18,7 @@ nihon['nagoya']='名古屋'
 nihon['akita']='秋田'
 nihon['aomori']='青森'
 nihon['niigata']='新潟'
+nihon['izumo']='出雲'
 
 nihon['kumamoto']='熊本'
 nihon['nagasaki']='長崎'
