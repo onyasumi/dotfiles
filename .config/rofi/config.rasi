@@ -1,6 +1,6 @@
 configuration {
 	modi: "ssh,drun,combi";
-	font: "SF Mono 8";
+	font: "JetBrains Mono 8";
 	terminal: "kitty";
 	ssh-client: "ssh";
 	ssh-command: "kitty -e {ssh-client} {host}";
