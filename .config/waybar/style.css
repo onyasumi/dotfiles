@@ -46,7 +46,7 @@ tooltip label {
 
 #clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
     padding: 7px;
-    margin: 2px;
+    margin: 1px 8px 1px 0px;
 }
 
 #clock {
